@@ -1,8 +1,4 @@
 import psycopg2, sys
-sys.path.insert(0, '..')
-from seed import *
-from psycopg2 import sql
-
 
 class SQLRunner:
     def __init__(self):
