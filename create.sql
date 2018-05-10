@@ -1,3 +1,0 @@
-CREATE TABLE countries (id SERIAL PRIMARY KEY, name TEXT);
-
-CREATE TABLE states (id SERIAL PRIMARY KEY, name TEXT, country_id INTEGER);

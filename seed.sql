@@ -1,3 +1,28 @@
-INSERT INTO countries (name) VALUES ('USA'), ('Canada');
+CREATE TABLE sales (id SERIAL PRIMARY KEY, date_of_sale DATE, location TEXT, amount INTEGER);
 
-INSERT INTO states (name, country_id) VALUES ('New York', 1), ('California', 1), ('Wyoming', 1), ('Ontario', 2), ('British Columbia', 2);
+INSERT INTO sales (date_of_sale, location, amount) VALUES
+('2018-04-21', 'Union Square', 50),
+('2018-04-21', 'Union Square', 40),
+('2018-04-22', 'Union Square', 60),
+('2018-04-22', 'Union Square', 30),
+('2018-04-22', 'Union Square', 30),
+('2018-04-23', 'Union Square', 30),
+('2018-04-23', 'Union Square', 80),
+('2018-04-21', 'Bowery', 90),
+('2018-04-22', 'Bowery', 80),
+('2018-04-22', 'Bowery', 80),
+('2018-04-22', 'Bowery', 70),
+('2018-04-23', 'Bowery', 90),
+('2018-04-23', 'Bowery', 80),
+('2018-04-21', 'Bryant Park', 20),
+('2018-04-21', 'Bryant Park', 30),
+('2018-04-21', 'Bryant Park', 20),
+('2018-04-22', 'Bryant Park', 30),
+('2018-04-22', 'Bryant Park', 40),
+('2018-04-23', 'Bryant Park', 20),
+('2018-04-23', 'Bryant Park', 25),
+('2018-04-23', 'Bryant Park', 30),
+('2018-04-21', 'Tribeca', 100),
+('2018-04-22', 'Tribeca', 50),
+('2018-04-22', 'Tribeca', 75),
+('2018-04-23', 'Tribeca', 45);
