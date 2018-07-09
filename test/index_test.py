@@ -8,7 +8,7 @@ class TestSQLWindowFunctions(unittest.TestCase):
     def test_select_distinct_total_location_sales_on_april_23(self):
         connection = psycopg2.connect(database="window_functions_db", host="localhost")
         cursor = connection.cursor()
-        seed = open("../seed.sql", "r")
+        seed = open("./seed.sql", "r")
         sql = seed.read()
         cursor.execute(sql)
 
@@ -23,7 +23,7 @@ class TestSQLWindowFunctions(unittest.TestCase):
     def test_select_distinct_location_and_avg_amount_partitioned_by_location(self):
         connection = psycopg2.connect(database="window_functions_db", host="localhost")
         cursor = connection.cursor()
-        seed = open("../seed.sql", "r")
+        seed = open("./seed.sql", "r")
         sql = seed.read()
         cursor.execute(sql)
 
@@ -38,7 +38,7 @@ class TestSQLWindowFunctions(unittest.TestCase):
     def test_select_distinct_date_and_total_company_wide_sales_split_by_date_ordered_by_date(self):
         connection = psycopg2.connect(database="window_functions_db", host="localhost")
         cursor = connection.cursor()
-        seed = open("../seed.sql", "r")
+        seed = open("./seed.sql", "r")
         sql = seed.read()
         cursor.execute(sql)
 
@@ -53,7 +53,7 @@ class TestSQLWindowFunctions(unittest.TestCase):
     def test_select_rank_the_sales_of_each_location_from_highest_to_lowest(self):
         connection = psycopg2.connect(database="window_functions_db", host="localhost")
         cursor = connection.cursor()
-        seed = open("../seed.sql", "r")
+        seed = open("./seed.sql", "r")
         sql = seed.read()
         cursor.execute(sql)
 
