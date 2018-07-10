@@ -1,4 +1,4 @@
-CREATE TABLE sales (id SERIAL PRIMARY KEY, date_of_sale DATE, location TEXT, amount INTEGER);
+CREATE TABLE IF NOT EXISTS sales (id SERIAL PRIMARY KEY, date_of_sale DATE, location TEXT, amount INTEGER);
 
 INSERT INTO sales (date_of_sale, location, amount) VALUES
 ('2018-04-21', 'New York', 50),

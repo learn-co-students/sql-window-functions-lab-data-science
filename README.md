@@ -11,6 +11,18 @@ In this lab we will use window functions to write queries over certain segments,
 4.  Differentiate between using `ORDER BY` inside and outside the window function
 5.  Use the `DISTINCT` keyword to remove duplicate results
 
+## Working with Postgresql
+
+Window functions are a relatively new addition to the SQL language.  As of today, window functions are not yet supported by SQLite3, so it's finally time to begin working with Postgres, which is a more powerful form of the database.
+
+First, [click here](https://postgresapp.com/) to download the Postgres app.  Once we have downloaded the app, we can search for "Postgres" in spotlight (the magnifying glass at the top right of our navigation bar) to open and run the application.  Double click on the "postgres" barrel icon to bring up a Postgres terminal.
+
+From the Postgres terminal, enter the following command to create the database we will be using for this lab:
+
+> `CREATE DATABASE window_functions_db;`
+
+And we are all set! Now, on to the lab...
+
 ## Record Store Sales
 
 Records-R-Sweet is a startup retail company aiming to repopularize record collecting despite the ubiquity of digital music and smartphones.  Records-R-Sweet has opened retail stores in several cities, including Manhattan, Brooklyn, Washington, D.C., Houston, and London.  We have been hired to track various aspects of the company's sales data across all its locations.  The company has provided us with a table of information, as seen below:
