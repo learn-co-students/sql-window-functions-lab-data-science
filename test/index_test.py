@@ -12,10 +12,11 @@ class TestSQLWindowFunctions(unittest.TestCase):
         sql = seed.read()
         cursor.execute(sql)
 
-        result = [('Brooklyn', 170), ('Houston', 60), ('London', 45), ('New York', 110), ('Washington', 20)]
+        result = {'Brooklyn': 170, 'Houston': 60, 'London': 45, 'New York': 110, 'Washington': 20}
 
         cursor.execute(select_distinct_total_location_sales_on_april_23())
-        test = cursor.fetchall()
+        raw = cursor.fetchall()
+        test = dict(raw)
 
         self.assertEqual(test, result)
 
@@ -27,10 +28,11 @@ class TestSQLWindowFunctions(unittest.TestCase):
         sql = seed.read()
         cursor.execute(sql)
 
-        result = [('New York', Decimal('45.7142857142857143')), ('London', Decimal('67.5000000000000000')), ('Brooklyn', Decimal('81.6666666666666667')), ('Houston', Decimal('28.7500000000000000')), ('Washington', Decimal('26.6666666666666667'))]
+        result = {'New York': Decimal('45.7142857142857143'), 'London': Decimal('67.5000000000000000'), 'Brooklyn': Decimal('81.6666666666666667'), 'Houston': Decimal('28.7500000000000000'), 'Washington': Decimal('26.6666666666666667')}
 
         cursor.execute(select_distinct_location_and_avg_amount_partitioned_by_location())
-        test = cursor.fetchall()
+        raw = cursor.fetchall()
+        test = dict(raw)
 
         self.assertEqual(test, result)
 
